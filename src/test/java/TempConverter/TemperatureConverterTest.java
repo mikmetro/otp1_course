@@ -1,7 +1,6 @@
 package TempConverter;
 
 import junit.framework.TestCase;
-import org.junit.Test;
 
 public class TemperatureConverterTest extends TestCase {
     public void testCelsiusToFahrenheit() {
@@ -9,7 +8,7 @@ public class TemperatureConverterTest extends TestCase {
     }
 
     public void testFahrenheitToCelsius() {
-        assertEquals(54.44444, TemperatureConverter.celsiusToFahrenheit(130), 0.0001);
+        assertEquals(54.44444, TemperatureConverter.fahrenheitToCelsius(130), 0.0001);
     }
 
     public void testExtremeTemp() {
