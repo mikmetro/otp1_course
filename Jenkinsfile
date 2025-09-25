@@ -5,8 +5,9 @@ pipeline {
     }
     stages {
         stage('checking') {
-        steps {
-            git branch:'master', url: 'https://github.com/mikmetro/otp1_course'
+            steps {
+                git branch:'master', url: 'https://github.com/mikmetro/otp1_course'
+            }
         }
 
         stage ('build') {
