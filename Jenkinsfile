@@ -33,7 +33,9 @@ pipeline {
         }
         stage('Publish Coverage Report') {
             steps {
-                jacoco()
+                recordCoverage(tools: [[parser: 'JACOCO']],
+                            sourceCodeRetention: 'LAST_BUILD',
+                            sourceDirectories: [[path: 'plugin/src/main/java']])
             }
         }
     }
