@@ -12,18 +12,18 @@ pipeline {
 
         stage ('build') {
             steps {
-                mvn clean install
+                sh "mvn clean install"
             }
         }
 
         stage('Test') {
             steps {
-                mvn test
+                sh "mvn test"
             }
         }
         stage('Code Coverage') {
             steps {
-                mvn jacoco:report
+                sh "mvn jacoco:report"
             }
         }
         stage('Publish Test Results') {
